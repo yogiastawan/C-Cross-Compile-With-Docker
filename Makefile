@@ -7,10 +7,10 @@ SRC = $(wildcard *.c) $(wildcard */*.c)
 OBJ = $(SRC:%.c=%.o)
 EXEC= app
 
-DOCKER_UBUNTU_X6_64=sudo docker run --rm -it -v /home/yogiastawan/Programming/Docker/test3-cross-compile/:/src:z -w /src ubuntu-x86_64:gtk3
-DOCKER_UBUNTU_ARM_64V8=sudo docker run --rm -it -v /home/yogiastawan/Programming/Docker/test3-cross-compile/:/src:z -w /src ubuntu-arm64v8:gtk3
-DOCKER_UBUNTU_ARM_32V7=sudo docker run --rm -it -v /home/yogiastawan/Programming/Docker/test3-cross-compile/:/src:z -w /src ubuntu-arm32v7:gtk3
-DOCKER_RASPI=sudo docker run --rm -it -v /home/yogiastawan/Programming/Docker/test3-cross-compile/:/src:z -w /src raspi-stretch:gtk3
+DOCKER_UBUNTU_X6_64=docker run --rm -it -v /home/yogiastawan/Programming/Docker/test3-cross-compile/:/src:z -w /src ubuntu-x86_64:gtk3
+DOCKER_UBUNTU_ARM_64V8=docker run --rm -it -v /home/yogiastawan/Programming/Docker/test3-cross-compile/:/src:z -w /src ubuntu-arm64v8:gtk3
+DOCKER_UBUNTU_ARM_32V7=docker run --rm -it -v /home/yogiastawan/Programming/Docker/test3-cross-compile/:/src:z -w /src ubuntu-arm32v7:gtk3
+DOCKER_RASPI=docker run --rm -it -v /home/yogiastawan/Programming/Docker/test3-cross-compile/:/src:z -w /src raspi-stretch:gtk3
 
 BUILDDIR=./build
 RELBUILDDIR=./build/release/
