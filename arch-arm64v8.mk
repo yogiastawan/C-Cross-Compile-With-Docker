@@ -19,7 +19,7 @@ DBGEXEC=$(addprefix $(DBGBUILDDIR), $(EXEC))
 
 release: $(RELEXEC)
 
-debug: $(EXEC)
+debug: $(DBGEXEC)
 
 # release
 $(RELEXEC): $(RELOBJS)
